@@ -50,7 +50,7 @@ jobs:
         pip install -r requirements.txt
     - name: make website
       run: |
-        python all.py --dateok
+        python all.py
         python index.py
     - name: Upload artifact
       # Automatically uploads an artifact from the './_site' directory by default
