@@ -992,12 +992,12 @@ body {
 							<pre>python index.py</pre>
 						</article>
 						<hr/>
-						<article class="box post post-excerpt">
-							<header>
-								<h3><a id="tag"> Tag </a></h3>
-							</header>
-							%%tag%%
-						</article>
+						<!-- <article class="box post post-excerpt"> -->
+						<!-- 	<header> -->
+						<!-- 		<h3><a id="tag"> Tag </a></h3> -->
+						<!-- 	</header> -->
+						<!-- 	%%tag%% -->
+						<!-- </article> -->
 						<article class="box post post-excerpt">
 							<header>
 								<h3><a id="list"> Lista dei feed </a></h3>
@@ -1022,7 +1022,7 @@ body {
                         <li><a href="#consiglio">Cosa mi consigli?</a></li>
                         <li><a href="#diy">Fai da te</a></li>
                         <li><a href="#list">Lista</a></li>
-                        <li><a href="#tag">Tag</a></li>
+                        <!-- <li><a href="#tag">Tag</a></li> -->
                     </ul>
                 </nav>
                 <!-- Copyright -->
