@@ -908,6 +908,7 @@ body {
 
 	}
 		</style>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	</head>
 	<body>
 
@@ -992,12 +993,23 @@ body {
 							<pre>python index.py</pre>
 						</article>
 						<hr/>
-						<!-- <article class="box post post-excerpt"> -->
-						<!-- 	<header> -->
-						<!-- 		<h3><a id="tag"> Tag </a></h3> -->
-						<!-- 	</header> -->
-						<!-- 	%%tag%% -->
-						<!-- </article> -->
+						<article class="box post post-excerpt">
+							<header>
+								<h3><a id="tag"> Tag </a></h3>
+							</header>
+              <div x-data="{
+                search: '',
+                show_item(el) {
+                  return this.search === '' || el.textContent.toLowerCase().includes(this.search.toLowerCase())
+                },
+                show_header(el) {
+                  return this.search === '' || el.firstElementChild.textContent.toLowerCase().includes(this.search.toLowerCase())
+                }
+              }">
+                <p><input class="search-input" type="search" placeholder="Filtra tag" x-model="search"></p>
+							  %%tag%%
+              </div>
+						</article>
 						<article class="box post post-excerpt">
 							<header>
 								<h3><a id="list"> Lista dei feed </a></h3>
@@ -1009,7 +1021,7 @@ body {
 
 		<!-- Sidebar -->
 			<div id="sidebar">
-				
+
 
 				<!-- Logo -->
 				<h1 id="logo"><a href="#">RaiPlay Podcast</a></h1>
