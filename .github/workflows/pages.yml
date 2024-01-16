@@ -45,6 +45,7 @@ jobs:
         pip install -r requirements.txt
     - name: make website
       run: |
+        git clone --depth=1 -b github-pages https://github.com/timendum/raiplaysound.git dist
         python all.py
         python index.py
     - name: Upload artifact
